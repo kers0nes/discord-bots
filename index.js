@@ -8,13 +8,10 @@ const client = new Client({
     ]
 });
 
-// Change this:
+// ONLY DECLARE THIS ONCE!
 const TOKEN = process.env.DISCORD_TOKEN;
 
-// To this (put YOUR actual token):
-const TOKEN = 'MTQ5NTQ1ODc5NTIyNzMxNjM1NQ.GHIBWe.K1kSN-3JS6rmuv2-w_F1YFpOAGCNfF3hHS2DM8';
-
-// Your Roblox scripts database
+// Your Roblox scripts
 const scripts = [
     {
         name: "Auto Farm Script",
@@ -81,7 +78,7 @@ client.on('messageCreate', async (message) => {
         const embed = new EmbedBuilder()
             .setColor(0x00FF00)
             .setTitle(`📝 ${script.name}`)
-            .setDescription(script.code)
+            .setDescription(`\`\`\`lua\n${script.code}\n\`\`\``)
             .addFields(
                 { name: 'Game', value: script.game, inline: true },
                 { name: 'Type', value: script.type, inline: true }
@@ -91,4 +88,5 @@ client.on('messageCreate', async (message) => {
     }
 });
 
+// ONLY ONE .login() CALL!
 client.login(TOKEN);
