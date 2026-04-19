@@ -8,7 +8,11 @@ const client = new Client({
     ]
 });
 
+// Change this:
 const TOKEN = process.env.DISCORD_TOKEN;
+
+// To this (put YOUR actual token):
+const TOKEN = 'MTQ5NTQ1ODc5NTIyNzMxNjM1NQ.GHIBWe.K1kSN-3JS6rmuv2-w_F1YFpOAGCNfF3hHS2DM8';
 
 // Your Roblox scripts database
 const scripts = [
